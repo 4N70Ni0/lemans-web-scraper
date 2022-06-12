@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mw_lemans</class>
+ <widget class="QMainWindow" name="mw_lemans">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1387</width>
+    <height>638</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>10</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="hl_stats">
+      <item>
+       <widget class="QLabel" name="lb_flag">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Flag</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::AutoText</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="vl_weather">
+        <item>
+         <widget class="QLabel" name="lb_wind">
+          <property name="text">
+           <string>Wind: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lb_air_temp">
+          <property name="text">
+           <string>Air Temp: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lb_humidity">
+          <property name="text">
+           <string>Humidity: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lb_track_temp">
+          <property name="text">
+           <string>Track Temp: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lb_pressure">
+          <property name="text">
+           <string>Pressure: </string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="lb_remaining_time">
+        <property name="text">
+         <string>Remaining time</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>17</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabs">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_overall">
+       <attribute name="title">
+        <string>OVERALL</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QTableWidget" name="tw_overall">
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string>#</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>STATUS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>CLASS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>TEAM</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>DRIVER</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>CAR</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>LAPS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>GAPS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>INT</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>LAST</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>BEST</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>SPD</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>PITS</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_hypercar">
+       <attribute name="title">
+        <string>HYPERCAR</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QTableWidget" name="tw_hypercar">
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string>#</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>STATUS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>CLASS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>TEAM</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>DRIVER</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>CAR</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>LAPS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>GAPS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>INT</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>LAST</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>BEST</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>SPD</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>PITS</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_lmp2">
+       <attribute name="title">
+        <string>LM P2</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QTableWidget" name="tw_lmp2">
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string>#</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>STATUS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>CLASS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>TEAM</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>DRIVER</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>CAR</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>LAPS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>GAPS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>INT</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>LAST</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>BEST</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>SPD</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>PITS</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_lmgtepro">
+       <attribute name="title">
+        <string>LM GTE PRO</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QTableWidget" name="tw_lmgtepro">
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string>#</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>STATUS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>CLASS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>TEAM</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>DRIVER</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>CAR</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>LAPS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>GAPS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>INT</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>LAST</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>BEST</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>SPD</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>PITS</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_lmgteam">
+       <attribute name="title">
+        <string>LM GTE AM</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QTableWidget" name="tw_lmgteam">
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string>#</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>STATUS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>CLASS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>TEAM</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>DRIVER</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>CAR</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>LAPS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>GAPS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>INT</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>LAST</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>BEST</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>SPD</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>PITS</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1387</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
